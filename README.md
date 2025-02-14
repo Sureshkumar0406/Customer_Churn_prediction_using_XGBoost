@@ -13,7 +13,7 @@ Customer churn poses a significant challenge for telecom companies, leading to r
 **Dataset Information**
 Source: Telco Customer Churn Dataset
 Records: 7,043
-Features: 21
+Features: 23
 Target Variable: Churn (Yes/No)
 Key Features:
 
