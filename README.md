@@ -31,13 +31,15 @@ Encoding categorical variables appropriately.
 
 **Handling Missing Values:**
 
-Converted TotalCharges to numeric, replacing missing values with the median.
-Encoding Categorical Features:
+Converted TotalCharges to numeric, replacing missing values with the zero.
 
+**Encoding Categorical Features:**
 Applied One-Hot Encoding to variables like Contract, PaymentMethod, and InternetService.
-**Feature Scaling:**
 
-Standardized numerical features (tenure, MonthlyCharges, TotalCharges) using StandardScaler.
+**Feature Scaling:**
+Since XGBoost builds decision trees that split data based on feature thresholds not on the magnitude of numerical values so feture scaling is not necessary.
+Unlike linear models, XGBoost does not rely on Euclidean distances so feature scaling is not necessary so in built XGboost handles value or data of varying data range.
+
 **Addressing Class Imbalance:**
 
 Utilized Synthetic Minority Over-sampling Technique (SMOTE) to balance the target classes.
