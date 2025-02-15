@@ -79,41 +79,11 @@ Utilized GridSearchCV to optimize parameters such as max_depth, learning_rate, n
 **Model Evaluation**
 Performance Metrics:
 
-Accuracy: ~80%
-Precision: ~70%
-Recall: ~65%
-F1-Score: ~67%
-ROC-AUC Score: 0.84
-Confusion Matrix:
+Accuracy: ~76% decreased from 86% to 76%
+Precision: ~70%  decreased in precision from 66% to 53%
+Recall: ~65%   Increased in recall from 55% to 82%
+F1-Score: ~64%
 
-Predicted No Churn	Predicted Churn
-Actual No Churn	1200	150
-Actual Churn	200	450
-The model demonstrates a balanced performance, effectively identifying both churners and non-churners.
+The model demonstrates a balanced performance, effectively identifying the True Negative cases i.e. customers who stayed in the company.
 
-**Key Findings & Business Insights**
-High-Risk Segments:
 
-Customers with month-to-month contracts and high monthly charges are more prone to churn.
-Retention Strategies:
-
-Implementing loyalty programs or discounts for customers with short tenure and high monthly charges may reduce churn.
-Service Enhancement:
-
-Improving service quality for customers subscribed to multiple services can enhance retention.
-9️⃣ Deployment Strategy
-Model Deployment:
-
-The trained XGBoost model is deployed using a Flask API, allowing for real-time predictions.
-
-**Accessing the API:**
-
-Start the Flask Application:
-
-Run app.py to initiate the server.
-Make Predictions:
-
-Send a POST request to /predict with customer data in JSON format.
-Response:
-
-The API returns the probability of churn, enabling
