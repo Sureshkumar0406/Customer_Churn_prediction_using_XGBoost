@@ -77,13 +77,11 @@ XGBoost was selected due to its superior performance in handling imbalanced data
 Utilized GridSearchCV to optimize parameters such as max_depth, learning_rate, n_estimators, subsample, and colsample_bytree.
 
 **Model Evaluation**
-Performance Metrics:
 
-Accuracy: ~76% decreased from 86% to 76%
-Precision: ~70%  decreased in precision from 66% to 53%
-Recall: ~65%   Increased in recall from 55% to 82%
-F1-Score: ~64%
+After comparing the traditional Random Forest classifier & XGBoost classifier algorithms, there is an increase in the overall accuracy but model fails to predict the True Negative cases so Recall% was less.
+After fine tune the hyper parameters in XGboost model, the recall value increased form 55% to 82% which helps company to identify the loyal customers.
+Also, it helps to avoid unnecessary customer retention costs by ensuring only real churners receives discounts or retention efforts to hold the customers.
+A higher True Negative Rate ensures that companies can confidently rely on churn metrics for strategic planning.
 
 The model demonstrates a balanced performance, effectively identifying the True Negative cases i.e. customers who stayed in the company.
-
 
